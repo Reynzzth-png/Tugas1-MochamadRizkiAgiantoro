@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Manajemen Supir</title>
+</head>
+<body>
+    <h1>Form Manajemen Supir Travel</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h2>Data Pribadi Supir</h2>
+        <p>
+            <label for="nama_supir">Nama Supir Travel:</label><br>
+            <input type="text" id="nama_supir" name="nama_supir" required>
+        </p>
+        <p>
+            <label for="email_supir">Email Supir:</label><br>
+            <input type="email" id="email_supir" name="email_supir" required>
+        </p>
+        <p>
+            <label for="nomor_hp">Nomor HP Supir:</label><br>
+            <input type="text" id="nomor_hp" name="nomor_hp" pattern="[0-9]{10,13}" placeholder="Contoh: 081234567890" required>
+        </p>
+        <h2>Informasi Perjalanan</h2>
+        <p>
+            <label for="destinasi">Destinasi Supir:</label><br>
+            <select id="destinasi" name="destinasi" required>
+                <option value="">-- Pilih Destinasi --</option>
+                <option value="medan">Medan</option>
+                <option value="pematang_siantar">Pematang Siantar</option>
+                <option value="prapat">Prapat</option>
+                <option value="padang">Padang</option>
+                <option value="bukittinggi">Bukittinggi</option>
+                <option value="pekanbaru">Pekanbaru</option>
+                <option value="banda_aceh">Banda Aceh</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="semarang">Semarang</option>
+                <option value="yogyakarta">Yogyakarta</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="malang">Malang</option>
+                <option value="denpasar">Denpasar</option>
+                <option value="kupang">Kupang</option>
+                <option value="makassar">Makassar</option>
+                <option value="jayapura">Jayapura</option>
+                <option value="timika">Timika</option>
+            </select>
+        </p>
+        <p>
+            <label for="tanggal_berangkat">Tanggal Supir Berangkat:</label><br>
+            <input type="date" id="tanggal_berangkat" name="tanggal_berangkat" required>
+        </p>
+        <p>
+            <label for="waktu_berangkat">Waktu Berangkat:</label><br>
+            <input type="time" id="waktu_berangkat" name="waktu_berangkat" required>
+        </p>
+        <p>
+            <label for="jumlah_penumpang">Jumlah Penumpang:</label><br>
+            <input type="number" id="jumlah_penumpang" name="jumlah_penumpang" min="1" max="50" required>
+        </p>
+        <h2>Pilihan Armada</h2>
+        <p>
+            <input type="radio" id="armada_hiace" name="armada" value="hiace" required>
+            <label for="armada_hiace">Mobil Hiace</label>
+        </p>
+        <p>
+            <input type="radio" id="armada_bus_laksana" name="armada" value="bus_laksana" required>
+            <label for="armada_bus_laksana">Bus Laksana</label>
+        </p>
+        <p>
+            <input type="radio" id="armada_innova" name="armada" value="innova" required>
+            <label for="armada_innova">Kijang Innova</label>
+        </p>
+        <p>
+            <input type="radio" id="armada_mercedes" name="armada" value="mercedes" required>
+            <label for="armada_mercedes">Mercedes Benz 10000 OH</label>
+        </p>
+        <h2>Validasi Kesiapan Supir</h2>
+        <p>
+            <input type="checkbox" id="kesiapan_ngantuk" name="kesiapan_ngantuk" value="tidak_ngantuk">
+            <label for="kesiapan_ngantuk">supir sedang dalam kondisi ngantuk berat</label>
+        </p>
+        <p>
+            <input type="checkbox" id="kesiapan_sehat" name="kesiapan_sehat" value="sehat">
+            <label for="kesiapan_sehat">supir dalam keadaan sehat</label>
+        </p>
+        <p>
+            <input type="checkbox" id="kesiapan_obat" name="kesiapan_obat" value="tidak_pengaruh">
+            <label for="kesiapan_obat">supir tidak dalam pengaruh obat terlarang dan minum minuman yang memabukkan</label>
+        </p>
+        <h2>Dokumen Validasi</h2>
+        <p>
+            <label for="upload_surat">Upload Surat Kerja:</label><br>
+            <input type="file" id="upload_surat" name="upload_surat" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+            <br><small>Format yang didukung: PDF, DOC, DOCX, JPG, JPEG, PNG</small>
+        </p>
+        <h2>Simpan Data</h2>
+        <p>
+            <input type="submit" value="Simpan Data Supir">
+            <input type="reset" value="Reset Form">
+        </p>
+    </form>
+</body>
+</html>
